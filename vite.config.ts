@@ -9,8 +9,9 @@ export default defineConfig({
     preprocessorOptions: {
       scss: {
         additionalData: `
-        @import '../src/assets/variables.scss';
-        @import '../src/assets/colors.scss';
+        @import '../src/assets/_variables.scss';
+        @import '../src/assets/_colors.scss';
+        @import '../src/assets/_breakpoints.scss';
         `
       }
     }
