@@ -3,9 +3,9 @@
 </script>
 
 <template>
-  <div class="card-course">
+  <a href="/" class="card-course">
     <div class="card-course__content">
-      <img class="course-icon" alt="Vue logo" src="@/assets/icons/Pinia.webp"  />
+      <img class="course-icon" alt="Vue logo" src="@/assets/icons/Pinia-bw.png"  />
       <div class="course-info">
         <h2 class="title">Front-end com Vue</h2>
         <p class="description">Aprenda o básico ao avançado com o poderoso Vue3</p>
@@ -20,7 +20,7 @@
       <div class="meta-card lesson">12</div>
       <div class="meta-card duration">2h</div>
     </div> -->
-  </div>
+  </a>
   <br>
   <div class="card-course">
     <div class="card-course__content">
@@ -45,15 +45,14 @@
 
 <style scoped lang="scss">
 .card-course {
-  color: $white;
+  // color: $white;
   color: black;
-  background-color: seagreen;
-  // background: -webkit-linear-gradient(315deg,#42d392 25%,#647eff);
-  // background: -webkit-linear-gradient(144deg, #A1CDCE 25%, #647eff);
+  background-color: $soft-green;
+  // background-color: seagreen;
   // background: -webkit-linear-gradient(144deg, #A1CDCE 25%, #5566b7);
   display: grid;
   padding: 1.5rem;
-  border-radius: $radius-lg;
+  border-radius: $radius-md;
   gap: 2rem;
   transition: all 0.2s ease;
   
@@ -86,6 +85,7 @@
       place-items: center;
       object-fit: contain;
       transition: all 0.2s ease;
+      aspect-ratio: 1 / 1;
     }
 
     .course-info {
@@ -114,11 +114,13 @@
       
       .out-bar {
         background-color: rgba($color: $white-mute, $alpha: 0.6);
+        background-color: rgba($color: $soft-gray-400, $alpha: 0.6);
         border-radius: $radius-full;
         
         .inner-bar {
           border-radius: $radius-full;
           background-color: $white;
+          background-color: $soft-gray-500;
           height: 0.6rem;
           width: 30%;
         }
