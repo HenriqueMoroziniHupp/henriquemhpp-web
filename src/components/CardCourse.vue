@@ -29,11 +29,11 @@
         <h2 class="title">Front-end com Vue</h2>
         <p class="description">Aprenda o básico ao avançado com o poderoso Vue3</p>
       </div>
-      <div class="course-progress">
+      <!-- <div class="course-progress">
         <div class="out-bar">
           <div class="inner-bar" />
         </div>
-      </div>
+      </div> -->
     </div>
     <!-- <div class="card-course__meta">
       <div class="meta-card lesson">12</div>
@@ -47,7 +47,8 @@
 .card-course {
   // color: $white;
   color: black;
-  background-color: $soft-green;
+  // background-color: $soft-green;
+  background-color: rgba($soft-green, 0.6);
   // background-color: seagreen;
   // background: -webkit-linear-gradient(144deg, #A1CDCE 25%, #5566b7);
   display: grid;
@@ -56,9 +57,9 @@
   gap: 2rem;
   transition: all 0.2s ease;
   
-  @include screen(tablet-portrait-up) {
-    grid: 1fr / 1fr auto;
-  }
+  // @include screen(tablet-portrait-up) {
+  //   grid: 1fr / 1fr auto;
+  // }
   
 
   @include screen(tiny-phone-up) {
@@ -75,6 +76,17 @@
     @include screen(tablet-portrait-up) {
       grid: 90px auto / 90px auto;
       justify-content: start;
+    }
+
+    @include screen(phone-only) {
+      .icon-wrapper {
+        background-color: $soft-green;
+        padding: 0.8rem;
+        border-radius: $radius-sm;
+        display: grid;
+        place-items: center;
+        height: 140px;
+      }
     }
 
     .course-icon {
